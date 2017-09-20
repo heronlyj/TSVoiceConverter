@@ -47,8 +47,7 @@ public class TSVoiceConverter {
      - returns: True of false
     */
     public class func isAMRFile(_ filePath: String) -> Bool {
-        guard let result = String.init(filePath) else { return false }
-        return isAMRFile(result)
+        return isAMRFile(filePath)
     }
 
     /**
@@ -59,14 +58,13 @@ public class TSVoiceConverter {
      - returns: True of false
     */
     public class func isMP3File(_ filePath: String) -> Bool {
-        guard let result = String.init(filePath) else { return false }
-        return isMP3File(result)
+        return isMP3File(filePath)
     }
 }
 
 
 private extension Bool {
-    init<T : Integer>(_ integer: T){
+    init<T : BinaryInteger>(_ integer: T){
         self.init(integer != 0)
     }
 }
